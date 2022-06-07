@@ -1,0 +1,45 @@
+.cybertruck_main{
+  background-image: url("https://tesla-cdn.thron.com/delivery/public/image/tesla/0f22af4d-15e0-452d-ba66-1359490b4a0b/bvlatuR/std/2880x1800/Cybertruck-Hero-Desktop");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 560px;
+  width: 100%;
+}
+
+.cybertruck_logo {
+  height: 90px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 17vh;
+}
+
+.cybertruck_logo--text{
+  text-align: center;
+  font-size: 10px;
+}
+
+.cybertruck--news{
+  display: block;
+  border: 3px solid white;
+  background-color:transparent;
+  color: white;
+  width: 150px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 250px;
+  font-size: 0.01em;
+}
+
+.cybertruck_introduce{
+  background-color: black;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.cybertruck_introduce--img{
+  height: 90%;
+  text-align: center;
+}
