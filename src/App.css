@@ -1,3 +1,13 @@
+*{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "FB New Gothic";
+  /* @font-face {
+    font-family: font;
+    src: url();
+  } */
+}
+
 .cybertruck_main{
   background-image: url("https://tesla-cdn.thron.com/delivery/public/image/tesla/0f22af4d-15e0-452d-ba66-1359490b4a0b/bvlatuR/std/2880x1800/Cybertruck-Hero-Desktop");
   background-size: cover;
@@ -42,4 +52,120 @@
 .cybertruck_introduce--img{
   height: 90%;
   text-align: center;
+}
+
+
+
+.car--content{
+  float: right;
+  width: 25%;
+}
+
+.car--name{
+  text-align: center!important;
+  font-size: 2.5em;
+  font-weight: normal;
+}
+
+
+.car--info--ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+}
+
+.car--info{
+  display: inline-block;
+  text-align: center;
+  margin: 0.5em;
+  flex: 1 1 0px;
+}
+
+.car--info--text{
+  display: block;
+  margin: 0.5em;
+  font-size: 0.75em;
+  white-space:nowrap;
+}
+
+.car--info--num{
+  letter-spacing: -0.1em;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.car--info--unit{
+  letter-spacing: -0.1em;
+  font-size: 0.875em;
+}
+
+.price--button{
+  margin: 10px auto;
+  display: flex;
+  border-radius: 20px;
+  border: 2px solid gray;
+  background-color: white;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price--button--name{
+  text-align: left;
+  width: 8em;
+}
+
+.price--button--price{
+  align-items: center;
+  text-align: center;
+  width: 8em;
+}
+
+.char{
+  display: block;
+  margin: 40px auto 20px;
+  border-radius: 50px;
+  border: 0px solid;
+  width: 10em;
+  height: 2.5em;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+.color{
+  margin-top: 9em;
+  text-align: center;
+}
+
+.detail--title{
+  font-size: 1.75em;
+  font-weight: normal;
+}
+
+.color--btn--div{
+  display: flex;
+  justify-content: center;
+}
+
+.color--btn{
+  width: 54px;
+  height: 54px;
+  background-color: white;
+  border: 0px solid;
+}
+
+.color--img{
+  width: 40px;
+  height: 40px;
+}
+
+.color--name{
+  margin-right: 10px;
+}
+
+.color--price{
+  color: gray;
 }

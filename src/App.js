@@ -1,10 +1,12 @@
 import './App.css';
-import Sybertruck from './components/cybertruck';
+import OrderHeader from './components/OrderHeader';
+import ModelY from './components/ModelY';
 
 function App() {
   return (
     <div className="App">
-      <Sybertruck/>
+      <OrderHeader/>
+      <ModelY/>
     </div>
   );
 }
