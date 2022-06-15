@@ -135,6 +135,14 @@ button:hover{
   cursor: pointer;
 }
 
+.performance{
+  margin-top: 9em;
+}
+
+.performance--title{
+  text-align: center;
+}
+
 .color{
   margin-top: 9em;
   text-align: center;
