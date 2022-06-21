@@ -1,11 +1,11 @@
 import './App.css';
-import OrderHeader from './components/OrderHeader';
+// import OrderHeader from './components/OrderHeader';
 import ModelY from './components/ModelY';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <OrderHeader/>
+      {/* <OrderHeader/> */}
       <ModelY/>
     </div>
   );

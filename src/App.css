@@ -55,6 +55,16 @@
 }
 
 
+.orderHeader{
+  margin: 1px;
+  position: fixed;
+  width: 100%;
+  display: block;
+}
+
+.orderHeader .h1{
+  position: absolute;
+}
 
 .car--content{
   float: right;
@@ -103,12 +113,13 @@
 .price--button{
   margin: 10px auto;
   display: flex;
-  border-radius: 20px;
+  border-radius: 40px;
   border: 2px solid gray;
   background-color: white;
-  width: 90%;
+  width: 80%;
   justify-content: space-between;
   align-items: center;
+  height: 4em;
 }
 
 .price--button--name{
@@ -163,6 +174,7 @@ button:hover{
   height: 54px;
   background-color: white;
   border: 0px solid;
+  border-radius: 100%;
 }
 
 .color--img{
@@ -176,4 +188,9 @@ button:hover{
 
 .color--price{
   color: gray;
+}
+
+.img--div img{
+  position: fixed;
+  width: 75%;
 }
