@@ -11,6 +11,13 @@ export default function ModelY(){
     const [carImg, setCarImg] = useState('');
     const [color, setColor] = useState('white');
 
+    const [border19, setBorder19] = useState('3px solid #3457b1');
+    const [border20, setBorder20] = useState('0px solid');
+
+    // let border19 = {
+
+    // }
+
     const wheelBtnEl = document.getElementById('wheelBtn');
 
     const [wheelName, setWheelName] = useState('');
@@ -20,35 +27,56 @@ export default function ModelY(){
 
     let PerformUpgrade;
     useEffect(()=>{
-        setOption1();
+        setDistance(511);
+        setSpeed(217);
+        setSpeedPerHour(5.0);
+        setIsPer(true);
         setCarImg('basic--white');
         setColorName('Pearl White Multi-Coat');
         setColorPrice('포함');
         setColor('white');
-        // setWheelName('19인치 제미니 휠');
-        // setWheelPrice('포함');
+        setWheelName('19인치 제미니 휠');
+        setWheelPrice('포함');
+        
     },[])
 
     window.onload = () => {
         const buttonEl19 = document.getElementById('setWheelInfo19');
         const buttonEl20 = document.getElementById('setWheelInfo20');
+        
         buttonEl19.addEventListener('click', () => {
             setWheelName('19인치 제미니 휠');
             setWheelPrice('포함');
+            setBorder19("3px solid #3457b1");
+            setBorder20("0px solid");
         })
         
         buttonEl20.addEventListener('click', () => {
             setWheelName('20인치 인덕션 휠');
             setWheelPrice('₩2,571,000');
+            setBorder20("3px solid #3457b1");
+            setBorder19("0px solid");
         })
     }
 
     const setOption1 = () => {
+        const buttonEl19 = document.getElementById('setWheelInfo19');
+        const buttonEl20 = document.getElementById('setWheelInfo20');
         setDistance(511);
         setSpeed(217);
         setSpeedPerHour(5.0);
         setIsPer(true);
         setCarImg(`basic--${color}`);
+        wheelBtnEl.innerHTML = `<button class="color--btn" id="setWheelInfo19"  style="border: ${border19}"><img src="../images/19.png" class="color--img" alt="바퀴사진"/></button><button class="color--btn" id="setWheelInfo20"  style="border: ${border20}"><img src="../images/20.png" class="color--img" alt="바퀴사진"/></button>`;
+        
+        
+        if(setWheelName === '19인치 제미니 휠'){
+            buttonEl19.click();
+        }
+        else{
+            buttonEl20.click();
+        }
+
     }
 
     const setOption2 = () => {
@@ -57,6 +85,10 @@ export default function ModelY(){
         setSpeedPerHour(3.7);
         setIsPer(false);
         setCarImg(`perform--${color}`);
+        PerformUpgrade = '<div><h2 style="text-align: center; font-weight: normal; font-size: 1.75em; margin:0.5em;">퍼포먼스 업그레이드</h2><span style="display: block; text-align: center;">포함</span><ul><li style="margin-top: 0.5em">최고 속도를 217km/h에서 250km/h로 증가</li><li style="margin-top: 0.5em">21인치 Überturbine 휠</li><li style="margin-top: 0.5em">퍼포먼스 브레이크</li><li style="margin-top: 0.5em">낮아진 서스펜션</li><li style="margin-top: 0.5em">알루미늄 알로이 페달</li></ul></div>'
+        wheelBtnEl.innerHTML = '<button class="color--btn" style="border: 3px solid #3457b1"><img src="../images/21.png" class="color--img" alt="바퀴사진"/></button>';
+        setWheelName('21인치 Überturbine 휠');
+        setWheelPrice('포함');
     }
 
     const carImgName = (newColor) => {
@@ -69,18 +101,6 @@ export default function ModelY(){
         setCarImg(prev => prev += '--' + newColor);
     }
 
-    
-
-
-    if(!isPer){
-        PerformUpgrade = '<div><h2 style="text-align: center; font-weight: normal; font-size: 1.75em; margin:0.5em;">퍼포먼스 업그레이드</h2><span style="display: block; text-align: center;">포함</span><ul><li style="margin-top: 0.5em">최고 속도를 217km/h에서 250km/h로 증가</li><li style="margin-top: 0.5em">21인치 Überturbine 휠</li><li style="margin-top: 0.5em">퍼포먼스 브레이크</li><li style="margin-top: 0.5em">낮아진 서스펜션</li><li style="margin-top: 0.5em">알루미늄 알로이 페달</li></ul></div>'
-        // wheelBtn = '<button class="color--btn"><img src="../images/21.png" class="color--img"/></button>';
-        wheelBtnEl.innerHTML = '<button class="color--btn"><img src="../images/21.png" class="color--img"/></button>';
-    }
-    else{
-        // wheelBtn = `<button class="color--btn" id="setWheelInfo19"><img src="../images/19.png" class="color--img"/></button><button class="color--btn" id="setWheelInfo20"><img src="../images/20.png" class="color--img"/></button>`;
-        wheelBtnEl.innerHTML = '<button class="color--btn" id="setWheelInfo19"><img src="../images/19.png" class="color--img"/></button><button class="color--btn" id="setWheelInfo20"><img src="../images/20.png" class="color--img"/></button>';
-    }
 
     return(
         <div>
@@ -147,7 +167,14 @@ export default function ModelY(){
 
                 <div className="color">
                     <h4 className="detail--title">휠</h4>
-                    <div id="wheelBtn" className="color--btn--div"></div>
+                    <div id="wheelBtn">
+                        <button class="color--btn" id="setWheelInfo19" style={{border: border19}}>
+                            <img src="../images/19.png" className="color--img" alt="바퀴사진"/>
+                            </button>
+                        <button class="color--btn" id="setWheelInfo20" style={{border: border20}}>
+                            <img src="../images/20.png" className="color--img" alt="바퀴사진"/>
+                        </button>
+                    </div>
                     <span className="color--name">{wheelName}</span><span className="color--price">{wheelPrice}</span>
                 </div>
 
